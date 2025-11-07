@@ -1,4 +1,4 @@
-Hacker Rank test for REST example capital city search 
+Test for REST example capital city search 
 
 Branches
 Main
