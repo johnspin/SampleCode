@@ -1,0 +1,10 @@
+#comment
+# git ignore formate link'
+
+
+#examples
+
+
+**/__pycache__/
+*.exe
+*.pyc
