@@ -1,0 +1,17 @@
+Warning: Duplicate module=read at duplicate time=4: 
+Non supported module request: laskdjflksjf
+Non supported module request: time=7  module=erase  type=ok  action=['ALL', 'a', 99]
+Non supported module request: Expected keys missing or misspelled: tome
+Warning: Duplicate module=write at duplicate time=10: 
+Previous node total does NOT match at time=0  module=topology  NODES:Actual=0 Expected=1
+ERROR: Incorrect fail/ok result.  Actual=fail  Expected=ok at time=0  module=topology  NODES:Actual=0 Expected=1
+ERROR: Incorrect fail/ok result.  Actual=ok  Expected=fail at time=1  module=topology  NODES:Actual=0 Expected=0
+Previous live node total does not match Actual=3 at time=3  module=live_nodes  NODES:Stated previous=4 new requested=2
+ERROR:  Incorrect consistency level (fail/ok) result.  Actual=fail  Expected=ok at time=3  module=write  NODES:consistency level=ALL Expected=ok  LIVE=2  DEAD=1
+ERROR:  Incorrect consistency level (fail/ok) result.  Actual=fail  Expected=ok at time=4  module=write  NODES:consistency level=ALL Expected=ok  LIVE=2  DEAD=1
+ERROR:  Incorrect fail/ok result.  Actual=fail  Expected=ok at time=4  module=read  NODES:consistency level=ALL Expected=ok  LIVE=2  DEAD=1
+Searched under key=b for value=0 which was not previously written at time=4  module=read  NODES:consistency level=ALL Expected=ok  LIVE=2  DEAD=1
+Previous live node total does not match Actual=2 at time=5  module=live_nodes  NODES:Stated previous=3 new requested=2
+ERROR:  Incorrect consistency level (fail/ok) result.  Actual=fail  Expected=ok at time=8  module=write  NODES:consistency level=ALL Expected=ok  LIVE=2  DEAD=1
+ERROR:  Incorrect consistency level (fail/ok) result.  Actual=fail  Expected=ok at time=9  module=write  NODES:consistency level=ALL Expected=ok  LIVE=2  DEAD=1
+ERROR:  Incorrect consistency level (fail/ok) result.  Actual=fail  Expected=ok at time=10  module=write  NODES:consistency level=ALL Expected=ok  LIVE=2  DEAD=1
