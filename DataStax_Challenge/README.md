@@ -1,11 +1,5 @@
 # Jepsen Inspired Checker
 
-## Introduction
-
-Post-hoc verification of the history of those operations.
-
-In this task, we'd like you to write a specific sub-portion of a Jepsen test. We expect this to take 1.5 to 4 hours, with an average of ~2 hours of work. This should require minimal prerequisite knowledge of Apache Cassandra or DataStax Enterprise. While our team programs in Java and Python, please feel free to write this in the language you feel most comfortable or productive in.
-
 ## Task
 
 For the purposes of this task, we're going to describe a simplified testing framework, inspired by Jepsen. This testing framework has a few concepts you'll want to understand. These are summarized here, with necessary detail included below under "Reference Documentation".
