@@ -1,14 +1,10 @@
-# DataStax Software Engineer Tech Screen: Jepsen Inspired Checker
+# Jepsen Inspired Checker
 
 ## Introduction
 
-On our team at DataStax, we're inspired by Kyle Kingsbury's open source testing library, [Jepsen](https://github.com/jepsen-io/jepsen). For those not familiar, Jepsen is a library designed for testing the correctness of distributed systems, such as Apache Cassandra or DataStax Enterprise. If you're interested, [here is an old article showing Jepsen being used to test Apache Cassandra.](https://aphyr.com/posts/294-call-me-maybe-cassandra)
-
-Jepsen runs operations against a distributed system, and then does post-hoc verification of the history of those operations.
+Post-hoc verification of the history of those operations.
 
 In this task, we'd like you to write a specific sub-portion of a Jepsen test. We expect this to take 1.5 to 4 hours, with an average of ~2 hours of work. This should require minimal prerequisite knowledge of Apache Cassandra or DataStax Enterprise. While our team programs in Java and Python, please feel free to write this in the language you feel most comfortable or productive in.
-
-If you have any questions at all, please contact me at philip.thompson@datastax.com. There is absolutely no penalty for doing so.
 
 ## Task
 
