@@ -1,0 +1,2 @@
+ERROR:  Incorrect fail/ok result.  Actual=fail  Expected=ok at time=15  module=read  NODES:consistency level=ONE Expected=ok  LIVE=0  DEAD=6
+ERROR:  Incorrect fail/ok result.  Actual=fail  Expected=ok at time=18  module=read  NODES:consistency level=QUORUM Expected=ok  LIVE=0  DEAD=6

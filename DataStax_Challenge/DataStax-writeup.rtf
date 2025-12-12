@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww33140\viewh16460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 DataStax Engineering Screen - Jepsen Inspired Checker
+\fs24 \
+\
+\
+My checker was written in Python 2.7.13.  It should run with the following command line from Mac/Unix/Linux terminal, \
+assuming that machine has the correct version installed.\
+Change the directory separator to backslash \'93\\\'94 for a Windows environment.\
+\
+There are no special 3rd party libraries used.\
+\
+It would be easiest to run it from the directory with the files you want to check otherwise you will need to specify the full path or \
+full relative path of each file.\
+ An example command line would be:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs20 \cf0 \CocoaLigature0 ./DataStaxScreen/histories - folder with files to be checked\
+./DataStaxScreen/code - Python files including Main/entry point\
+\
+DataStaxScreen/histories$ - current directory\
+$ python ../DataStaxScreen/code/DataStacksMain.py 'examples.txt' 'one.txt'
+\f0\fs24 \CocoaLigature1  \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Alternately from the 
+\f1\fs20 \CocoaLigature0 ./DataStaxScreen/code
+\f0\fs24 \CocoaLigature1  folder:
+\f1\fs20 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 $ python ./DataStacksMain.py '../histories/examples.txt' '../histories/one.txt'
+\f0\fs24 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Strengths:\
+* Detects and ignores lines that are neither a comment nor a complete Operation.\
+* Detects and logs lines that do not have the correct attributes.\
+* Logging for comments and the repair module can be easily implemented.\
+\
+Weaknesses:\
+* The processing methods are on the long side and should be extracted to smaller methods and new classes.\
+* Does not search a folder for all files.\
+\
+Development Process:\
+I initially did some exploratory coding around processes that I would need such as:\
+* Opening and closing files and reading from and writing to them.\
+* Loading the text of the history files and parsing the Operation attributes string.\
+* Ignoring blank and comment lines.\
+* Converting the history file into a structure that can store the modules that happen at the same time,\
+	and be iterated through.\
+* Test the math that updates the model related to the topology and live_nodes modules.\
+\
+Then, I figured out the order that things would need to happen in and split those tasks into different objects.\
+I settled on iterating over each file and for each of them doing the following:\
+	1) load the valid Operation lines into a structure\
+	2) iterate thru the structure while:\
+		a) validating allowed attributes\
+		b) updating the model when appropriate\
+		c) verifying accurate file/ok values\
+		d) output any issues to a log file which has \'93_checked\'94 inserted in the original file name.\
+\
+I coded in such a what that the when reads and writes happen at the same time index, that modules are resolved in \
+	the order topology, live_nodes, write, read, repair is resolved first.\
+I also left method stubs for comment lines and the repair module, so they could be expanded later.\
+\
+Problems:\
+* I added more examples in the examples.txt file, but Mac TextEdit would change the single quote to another nearly \
+	identical character, but that wasn\'92t in the character set that Python could accept.  This caused unexpected code failures until\
+	I identified the problem.\
+* It was difficult to convert some attributes of the Operation string to quoted dictionary keys while still doing it correctly for the action key, so \
+	I split the two parts, recombined them, and used a **kwargs and eval() hack in the DataModel.add_line_to_data() and\
+	DataModel._add_to_history() methods to get all the values into one dictionary without excessive string manipulation.\
+\
+What to change with more time:\
+* Create an abstract class for each module containing the common attributes and methods and then inherit to each specific\
+	module so I could use polymorphism to run the imports and model updates.\
+* Load supported modules, attributes, types, consistency levels, etc. from a text file rather than having them hard coded.\
+* More comments with more detail.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Features to add:\
+* Erasing previous writes when an ALL write is successful.\
+* Not adding a value when a ONE write fails.\
+* Possibly creating a fail of higher consistency level read after a lower level write (e.g. ALL read should fail after ONE write)\
+* Ability to delete a value at a specific consistency level.  (ALL makes the most sense.)\
+* Allow an attempted repair of a single node via the repair module.\
+* Interactive command line rather than batch run.\
+* Ability to query file by attributes such as: module, result, time, key, value, consistency level.\
+* Searching a given folder for all files and possibly using a file mask to filter them.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+I may have spent too much time on this at 10+ hours, but I added a lot of extra validation and flexibility, checked my results were correct, and\
+improved error messages to the results file.\
+Once I started validating properties, it was hard to take other things for granted.\
+I have included my updated example.txt file.\
+\
+\
+- Please include any feedback you may have on the task and the documentation, as well as approximately how long it took you. We aren't \
+interested in this for assessment purposes, but so that we can improve on this screen for future applicants.\
+\
+\
+\
+\
+\
+}

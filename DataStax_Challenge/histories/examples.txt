@@ -1,0 +1,32 @@
+Operation{time=0, module=topology, type=ok, action={1, 3}}
+
+Operation{time=1, module=topology, type=fail, action={0, 3}}
+
+Operation{time=2, module=topology, type=ok, action={0, 3}}
+Operation{time=2, module=live_nodes, type=fail, action={3, 2}}
+Operation{time=3, module=write, type=ok, action={'ALL', 'a', 0}}
+Operation{time=3, module=live_nodes, type=ok, action={4, 2}}
+
+#this is an example comment
+Operation{time=4, module=write, type=ok, action={'ALL', 'a', 10}}
+Operation{time=4, module=read, type=ok, action={'ALL', 'a', 0}}
+Operation{time=4, module=read, type=ok, action={'ALL', 'b', 0}}
+
+
+Operation{time=5, module=live_nodes, type=ok, action={3, 2}}
+Operation{time=6, module=write, type=fail, action={'ALL', 'a', 7}}
+Operation{time=6, module=read, type=fail, action={'ALL', 'a'}}
+
+laskdjflksjf
+Operation{time=7, module=erase, type=ok, action={'ALL', 'a', 99}}
+Operation{tome=7, module=read, type=ok, action={'ALL', 'a', -1}}
+Operation{tome=7, time=8, module=write, type=ok, action={'ALL', 'a', 17}}
+
+Operation{time=9, module=write, type=ok, action={'ALL', 'b', 77}}
+
+Operation{time=10, module=repair, type=fail}
+Operation{time=10, module=write, type=ok, action={'ALL', 'b', 0}}
+
+Operation{time=10, module=write, type=ok, action={'ALL', 'c', 0}}
+Operation{time=11, module=repair, type=ok}
+#this is another example comment

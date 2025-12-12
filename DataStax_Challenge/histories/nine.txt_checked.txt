@@ -1,0 +1,2 @@
+ERROR:  Incorrect consistency level (fail/ok) result.  Actual=fail  Expected=ok at time=13  module=write  NODES:consistency level=ONE Expected=ok  LIVE=0  DEAD=0
+ERROR:  Incorrect consistency level (fail/ok) result.  Actual=fail  Expected=ok at time=14  module=write  NODES:consistency level=QUORUM Expected=ok  LIVE=0  DEAD=0

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject>
+  <CSHARP ProjectType="Local" ProductVersion="7.0.9466" SchemaVersion="1.0" ProjectGuid="{A0E3DA48-2B40-4E0B-99E5-461A0316D640}">
+    <Build>
+      <Settings ApplicationIcon="" AssemblyKeyContainerName="" AssemblyName="City Scape" AssemblyOriginatorKeyFile="" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="WinExe" RootNamespace="City_Scape" StartupObject="">
+        <Config Name="Debug" AllowUnsafeBlocks="false" BaseAddress="285212672" CheckForOverflowUnderflow="false" ConfigurationOverrideFile="" DefineConstants="DEBUG;TRACE" DocumentationFile="" DebugSymbols="true" FileAlignment="4096" IncrementalBuild="true" Optimize="false" OutputPath="bin\Debug\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="false" BaseAddress="285212672" CheckForOverflowUnderflow="false" ConfigurationOverrideFile="" DefineConstants="TRACE" DocumentationFile="" DebugSymbols="false" FileAlignment="4096" IncrementalBuild="false" Optimize="true" OutputPath="bin\Release\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="System" AssemblyName="System" HintPath="..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.dll" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" HintPath="..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll" />
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" HintPath="..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Windows.Forms.dll" />
+        <Reference Name="System.Data" AssemblyName="System.Data" HintPath="..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Data.dll" />
+        <Reference Name="System.XML" AssemblyName="System.Xml" HintPath="..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.XML.dll" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AccidentDestination.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="AccidentRouter.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Ambulance.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="BigBoat.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Boat.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="BoatCrossing.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="BoatGenerator.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="BridgeRoad.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Bus.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Caboose.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Car.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Conduit.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Conveyor.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Destination.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Firetruck.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Generator.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="HOVGenerator.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="InvRoad.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Merge.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Merge3.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Mobile.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="MobileList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Motorcycle.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Police.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Relay.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="River.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Road.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Router.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Router3.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="RouterMerge.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="RRCrossing.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="RRTrack.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SafetyLight.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Scene.cs" SubType="Form" BuildAction="Compile" />
+        <File RelPath="Scene.resx" DependentUpon="Scene.cs" BuildAction="EmbeddedResource" />
+        <File RelPath="SceneElement.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SceneLine.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SceneList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Stoplight.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SUV.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="TrainCar.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="TrainEngine.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="TrainGenerator.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+  <PropertyGroup xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FF7531A-4A12-44B9-93F9-0611ABAF8409}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>City_Scape</RootNamespace>
+    <AssemblyName>City Scape</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' " xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunWithWarnings>False</RunWithWarnings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunWithWarnings>False</RunWithWarnings>
+  </PropertyGroup>
+  <ItemGroup xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Compile Include="AccidentDestination.cs" />
+    <Compile Include="AccidentRouter.cs" />
+    <Compile Include="Ambulance.cs" />
+    <Compile Include="BigBoat.cs" />
+    <Compile Include="Boat.cs" />
+    <Compile Include="BoatCrossing.cs" />
+    <Compile Include="BoatGenerator.cs" />
+    <Compile Include="BridgeRoad.cs" />
+    <Compile Include="Bus.cs" />
+    <Compile Include="Caboose.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="Conduit.cs" />
+    <Compile Include="Conveyor.cs" />
+    <Compile Include="Destination.cs" />
+    <Compile Include="Firetruck.cs" />
+    <Compile Include="Generator.cs" />
+    <Compile Include="HOVGenerator.cs" />
+    <Compile Include="InvRoad.cs" />
+    <Compile Include="Merge.cs" />
+    <Compile Include="Merge3.cs" />
+    <Compile Include="Mobile.cs" />
+    <Compile Include="MobileList.cs" />
+    <Compile Include="Motorcycle.cs" />
+    <Compile Include="Police.cs" />
+    <Compile Include="Relay.cs" />
+    <Compile Include="River.cs" />
+    <Compile Include="Road.cs" />
+    <Compile Include="Router.cs" />
+    <Compile Include="Router3.cs" />
+    <Compile Include="RouterMerge.cs" />
+    <Compile Include="RRCrossing.cs" />
+    <Compile Include="RRTrack.cs" />
+    <Compile Include="SafetyLight.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="SceneElement.cs" />
+    <Compile Include="SceneLine.cs" />
+    <Compile Include="SceneList.cs" />
+    <Compile Include="Stoplight.cs" />
+    <Compile Include="SUV.cs" />
+    <Compile Include="TrainCar.cs" />
+    <Compile Include="TrainEngine.cs" />
+    <Compile Include="TrainGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <EmbeddedResource Include="Scene.resx">
+      <DependentUpon>Scene.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+</VisualStudioProject>

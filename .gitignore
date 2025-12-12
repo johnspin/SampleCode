@@ -1,0 +1,32 @@
+
+# git ignore format link
+# https://git-scm.com/docs/gitignore
+
+#examples
+
+#!build  build/ is ignored, !build/keep_this_file.txt would ensure keep_this_file.txt within build/ is tracked.
+#Matching files in any subdirectory: **/pattern matches files or directories named pattern in any subdirectory. 
+#For example, **/logs/*.log ignores all .log files within any logs directory.
+
+
+
+__pycache__/
+*.exe
+*.py[cod]
+*$py.class
+*.so
+bin/
+build/
+dist/
+lib/
+var/
+.project
+.vscode/
+.idea/
+.DS_Store
+.env
+.venv
+env/
+venv/
+ENV/
+
